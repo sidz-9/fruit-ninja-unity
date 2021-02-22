@@ -137,3 +137,4 @@ MonoBehaviour:
     type: 3}
   cut_right: {fileID: 1963670327364139408, guid: 2c4615685144cd844a551833667537f6,
     type: 3}
+  splash: {fileID: 6559588686756581097, guid: c9bae17d0b9a849499c37d65190f929c, type: 3}

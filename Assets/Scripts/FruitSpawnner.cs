@@ -34,9 +34,9 @@ public class FruitSpawnner : MonoBehaviour
         // starts the coroutine
         StartCoroutine("SpawnFruit");
 
-        if(Random.Range(0, 5) > 2) {
+        // if(Random.Range(0, 5) > 2) {
             SpawnBomb();
-        }
+        // }
     }
 
     IEnumerator SpawnFruit() {
