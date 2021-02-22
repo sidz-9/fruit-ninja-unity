@@ -38,6 +38,7 @@ public class FruitController : MonoBehaviour
             c2.GetComponent<Rigidbody2D>().AddTorque(Random.Range(-2f, 2f), ForceMode2D.Impulse);   // add random rotation
 
             Destroy(gameObject);
+            ScoreController.instance.IncrementScore();
         }
     }
 }
