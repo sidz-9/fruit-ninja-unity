@@ -12,13 +12,18 @@ public class FruitSpawnner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("StartSpawning", 1f);
+        if(!GameController.instance.gameOver) {
+            GameController.instance.StartGame();
+            Invoke("StartSpawning", 1f);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(GameController.instance.gameOver) {
+            StopSpawning();
+        }
     }
 
     public void StartSpawning() {

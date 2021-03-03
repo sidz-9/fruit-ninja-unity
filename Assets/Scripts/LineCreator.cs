@@ -96,6 +96,8 @@ public class LineCreator : MonoBehaviour
             GameObject b = Instantiate(blast, col.transform.position, Quaternion.identity) as GameObject;
             Destroy(b.gameObject, 1f);
             Destroy(col.gameObject);
+            // GameController.instance.gameOver = true;
+            GameController.instance.StopGame();
         }
     }
 }
