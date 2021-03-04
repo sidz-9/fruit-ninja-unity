@@ -21,7 +21,8 @@ public class FruitController : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
-        if(collision.gameObject.tag == "Line")
+        // if(collision.gameObject.tag == "Line")
+        if(collision.gameObject.tag == "Blade")
         {
             // spawn splash effect
             GameObject s = Instantiate(splash, transform.position, Quaternion.identity) as GameObject;
@@ -38,6 +39,8 @@ public class FruitController : MonoBehaviour
             c2.GetComponent<Rigidbody2D>().AddTorque(Random.Range(-2f, 2f), ForceMode2D.Impulse);   // add random rotation
 
             Destroy(gameObject);
+            Destroy(c1, 2f);
+            Destroy(c2, 2f);   
             ScoreController.instance.IncrementScore();
         }
     }
