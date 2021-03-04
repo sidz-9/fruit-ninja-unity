@@ -61,6 +61,7 @@ public class FruitSpawnner : MonoBehaviour
     }
 
     void SpawnBomb() {
+        Debug.Log("Bomb Spawnned");
         float randomPos = Random.Range(-maxX, maxX);
         Vector3 pos = new Vector3(randomPos, transform.position.y, 0);
         GameObject newBomb = Instantiate(bomb, pos, Quaternion.identity) as GameObject;
